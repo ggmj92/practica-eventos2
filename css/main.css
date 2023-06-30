@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    font-family:Arial, Helvetica, sans-serif
+}
+
+header {
+    width: 100%;
+    background-color: rgb(47, 46, 46);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mostrar-ocultar {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(47, 46, 46);
+    text-align: center;
+    padding: 15px;
+}
+
+/* .m-o{
+  
+} */
+
+.gridContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    padding: 100px;
+}
+
+.fotoGrande{
+    width: 100%;
+
+}
