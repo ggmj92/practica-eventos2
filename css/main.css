@@ -17,6 +17,10 @@ header {
     margin-bottom: 20px;
 }
 
+p {
+    padding: 20px;
+
+}
 
 h1 {
     font-size: 1.75rem;
@@ -43,10 +47,18 @@ h1 {
     column-gap: 10px;
     row-gap: 10px;
     justify-content: center;
-    padding: 100px;
+    padding: 20px;
 }
 
-.fotoGrande{
+.gridContainerGrande{
     width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "titulo-imagen"
+    "foto-grande"
+    "pie-imagen";
+    gap: 10px;
+    justify-content: center;
 
 }
