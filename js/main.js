@@ -1,7 +1,5 @@
 /* Variables y arrays */
 
-const body = document.querySelector("body");
-
 const miniFragmentAnadir = document.createDocumentFragment();
 const miniaturas = document.querySelector("#miniaturas");
 const imagenesArray = [
@@ -30,12 +28,23 @@ const fotoGrande = document.querySelector('#fotoGrande');
 
 /* Eventos */
 
+const body = document.querySelector('click', (ev) => {
+    if (ev.target.matches('#miniaturas')) {
+        // const agrandarMiniatura = 
+        // accededer al objeto por posición
+
+    };
+
+    // Aquí va función
+} 
+);
+
 /* Funciones */
 
 const cajasMiniaturas = () => {
   imagenesArray.forEach((item) => {
     const cajaMin = document.createElement("DIV");
-    cajaMin.classList.add('gridContainer');
+    // cajaMin.classList.add('gridContainer');
     const imagenes = document.createElement("IMG");
     imagenes.src = item.url, item.alt;
     cajaMin.append(imagenes);

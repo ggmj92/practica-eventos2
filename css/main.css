@@ -29,8 +29,8 @@ h1 {
 }
 
 .mostrar-ocultar {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 60%;
+    margin: 0 auto 20px auto;
     background-color: rgb(47, 46, 46);
     text-align: center;
     padding: 15px;
@@ -40,17 +40,22 @@ h1 {
   
 } */
 
-
-
 .gridContainer {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 10px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-}
+    margin: 0 auto;
+  }
+  
+  .gridContainer > div {
+    flex: 1 1 200px; /* flex-grow, flex-shrink flex-basis */
+    margin: 10px;
+  }
+  
+  .gridContainer img {
+    width: 100%;
+  }
 
 .gridContainerGrande{
     width: 100%;
