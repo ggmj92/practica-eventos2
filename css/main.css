@@ -36,9 +36,13 @@ h1 {
     padding: 15px;
 }
 
-.m-o{
+/* .m-o {
   display: none;
-}
+}; */
+
+/* .m-o-block {
+    display: block;
+}; */
 
 .gridContainer {
     width: 60%;

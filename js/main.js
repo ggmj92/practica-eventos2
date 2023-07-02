@@ -1,4 +1,4 @@
-/* Variables y arrays */
+// Variables y arrays 
 
 const miniFragmentAnadir = document.createDocumentFragment();
 const miniaturas = document.querySelector("#miniaturas");
@@ -30,9 +30,11 @@ const boton2 = document.querySelector('#boton2');
 const fotoGranFragment = document.createDocumentFragment();
 const fotoGrande = document.querySelector('#fotoGrande');
 
-/* Eventos */
+// Eventos
 
-// <<<<<<< HEAD
+// Evento 1
+
+/* 
 body.addEventListener('click', (ev) => {
   if (ev.target.matches('#boton1')) {
     boton1.classList.add('o-m');
@@ -41,8 +43,10 @@ body.addEventListener('click', (ev) => {
     boton2.classList.add('o-m');
     boton1.classList.remove('o-m');
   }
-});  
+}); 
+*/
 
+// <<<<<<< HEAD
 //         // const agrandarMiniatura = 
 //         // accededer al objeto por posición
 
@@ -52,6 +56,16 @@ body.addEventListener('click', (ev) => {
 // } 
 // );
 // =======
+
+/*
+body.addEventListener('click', (ev) => {
+  while (ev.target.matches('#boton1 m-o')) {
+    boton1.classList.remove('m-o');
+    item.classList.add('m-o-block');
+  } 
+});
+*/
+
 // const boton = document.getElementById('botones');
 // const contenedorImagenes = document.getElementById('minuaturas');
 
@@ -66,7 +80,17 @@ body.addEventListener('click', (ev) => {
 // });
 // >>>>>>> db42997f7419c9b2cf8128c5df6d7d61d511e243
 
-/* Funciones */
+// Evento 2
+
+// Evento 3
+
+body.addEventListener('click', (ev) => {
+  for (let url in imagenesArray) {
+    ev.target.classList.add('ampliar')
+  }
+})
+
+// Funciones 
 
 const cajasMiniaturas = () => {
   imagenesArray.forEach((item) => {
@@ -80,29 +104,12 @@ const cajasMiniaturas = () => {
   miniaturas.append(miniFragmentAnadir);
 };
 
-
-// const cajaFotosGran = () => {
-//   imagenesArray.forEach((item) => {
-//     const cajaGran = document.createElement('DIV');
-//     const cajaFig = document.createElement('FIGURE',);
-//     cajaFig.innerHTML = item.titulo;
-//     const cajaFigCap = document.createElement('FIGCAPTION');
-//     cajaFigCap.innerHTML = item.pie;
-//     const imagenesGran = document.createElement('IMG');
-//     imagenesGran.src = item.url, item.alt;
-//     cajaFigCap.append(imagenesGran);
-//     cajaFig.append(cajaFigCap);
-//     cajaGran.append(cajaFig);
-//     fotoGranFragment.append(cajaGran);
-//   });
-//   fotoGrande.append(fotoGranFragment);
-// };
-
 const cajaFotosGran = () => {
   imagenesArray.forEach((item) => {
     const cajaGran = document.createElement('DIV');
     const cajaFig = document.createElement('FIGURE');
     cajaFig.innerHTML = item.titulo;
+    cajaFig.classList.add('ampliar')
     const imagenesGran = document.createElement('IMG');
     imagenesGran.src = item.url, item.alt;
     const cajaFigCap = document.createElement('FIGCAPTION');
@@ -114,6 +121,25 @@ const cajaFotosGran = () => {
   });
   fotoGrande.append(fotoGranFragment);
 };
+
+/*
+const cajaFotosGran = () => {
+  imagenesArray.forEach((item) => {
+    const cajaGran = document.createElement('DIV');
+    const cajaFig = document.createElement('FIGURE',);
+    cajaFig.innerHTML = item.titulo;
+    const cajaFigCap = document.createElement('FIGCAPTION');
+    cajaFigCap.innerHTML = item.pie;
+    const imagenesGran = document.createElement('IMG');
+    imagenesGran.src = item.url, item.alt;
+    cajaFigCap.append(imagenesGran);
+    cajaFig.append(cajaFigCap);
+    cajaGran.append(cajaFig);
+    fotoGranFragment.append(cajaGran);
+  });
+  fotoGrande.append(fotoGranFragment);
+};
+*/
 
 cajasMiniaturas();
 cajaFotosGran();
