@@ -81,17 +81,34 @@ const cajasMiniaturas = () => {
 };
 
 
+// const cajaFotosGran = () => {
+//   imagenesArray.forEach((item) => {
+//     const cajaGran = document.createElement('DIV');
+//     const cajaFig = document.createElement('FIGURE',);
+//     cajaFig.innerHTML = item.titulo;
+//     const cajaFigCap = document.createElement('FIGCAPTION');
+//     cajaFigCap.innerHTML = item.pie;
+//     const imagenesGran = document.createElement('IMG');
+//     imagenesGran.src = item.url, item.alt;
+//     cajaFigCap.append(imagenesGran);
+//     cajaFig.append(cajaFigCap);
+//     cajaGran.append(cajaFig);
+//     fotoGranFragment.append(cajaGran);
+//   });
+//   fotoGrande.append(fotoGranFragment);
+// };
+
 const cajaFotosGran = () => {
   imagenesArray.forEach((item) => {
     const cajaGran = document.createElement('DIV');
     const cajaFig = document.createElement('FIGURE');
     cajaFig.innerHTML = item.titulo;
-    const cajaFigCap = document.createElement('FIGCAPTION');
-    cajaFigCap.innerHTML = item.pie;
     const imagenesGran = document.createElement('IMG');
     imagenesGran.src = item.url, item.alt;
-    cajaFigCap.append(imagenesGran);
-    cajaFig.append(cajaFigCap);
+    const cajaFigCap = document.createElement('FIGCAPTION');
+    cajaFigCap.innerHTML = item.pie;
+    imagenesGran.append(cajaFigCap);
+    cajaFig.append(imagenesGran);
     cajaGran.append(cajaFig);
     fotoGranFragment.append(cajaGran);
   });

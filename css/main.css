@@ -69,3 +69,15 @@ h1 {
     justify-content: center;
 
 }
+
+.gridContainerGrande figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gridContainerGrande figcaption {
+    margin-top: 10px;
+}
