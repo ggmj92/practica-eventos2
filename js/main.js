@@ -30,6 +30,19 @@ const fotoGrande = document.querySelector('#fotoGrande');
 
 /* Eventos */
 
+const boton = document.getElementById('botones');
+const contenedorImagenes = document.getElementById('minuaturas');
+
+boton.addEventListener('click', function () {
+  if (contenedorImagenes.style.display === 'none') {
+    contenedorImagenes.style.display = 'block';
+    boton.textContent = 'Ocultar Fotos';
+  } else {
+    contenedorImagenes.style.display = 'none';
+    boton.textContent = 'Mostrar Fotos';
+  }
+});
+
 /* Funciones */
 
 const cajasMiniaturas = () => {
@@ -46,20 +59,20 @@ const cajasMiniaturas = () => {
 
 
 const cajaFotosGran = () => {
-    imagenesArray.forEach((item) => {
-        const cajaGran = document.createElement('DIV');
-        const cajaFig = document.createElement('FIGURE');
-        cajaFig.innerHTML = item.titulo;
-        const cajaFigCap = document.createElement('FIGCAPTION');
-        cajaFigCap.innerHTML = item.pie;
-        const imagenesGran = document.createElement('IMG');
-        imagenesGran.src = item.url, item.alt;
-        cajaFigCap.append(imagenesGran);
-        cajaFig.append(cajaFigCap);
-        cajaGran.append(cajaFig);
-        fotoGranFragment.append(cajaGran);
-    });
-    fotoGrande.append(fotoGranFragment);
+  imagenesArray.forEach((item) => {
+    const cajaGran = document.createElement('DIV');
+    const cajaFig = document.createElement('FIGURE');
+    cajaFig.innerHTML = item.titulo;
+    const cajaFigCap = document.createElement('FIGCAPTION');
+    cajaFigCap.innerHTML = item.pie;
+    const imagenesGran = document.createElement('IMG');
+    imagenesGran.src = item.url, item.alt;
+    cajaFigCap.append(imagenesGran);
+    cajaFig.append(cajaFigCap);
+    cajaGran.append(cajaFig);
+    fotoGranFragment.append(cajaGran);
+  });
+  fotoGrande.append(fotoGranFragment);
 };
 
 cajasMiniaturas();
