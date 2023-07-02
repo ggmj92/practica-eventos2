@@ -38,7 +38,7 @@ h1 {
 
 /* .m-o {
   display: none;
-}; */
+};  */
 
 /* .m-o-block {
     display: block;
@@ -50,16 +50,16 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-  }
+}
   
   .gridContainer > div {
     flex: 1 1 200px; /* flex-grow, flex-shrink flex-basis */
     margin: 10px;
-  }
+}
   
   .gridContainer img {
     width: 100%;
-  }
+}
 
 .gridContainerGrande{
     width: 100%;
@@ -84,4 +84,10 @@ h1 {
 
 .gridContainerGrande figcaption {
     margin-top: 10px;
+}
+
+.ampliar {
+    width: 65%;
+    justify-content: center;
+    margin: auto;
 }

@@ -34,8 +34,12 @@ const fotoGrande = document.querySelector('#fotoGrande');
 
 // Evento 1
 
-/* 
+ 
 body.addEventListener('click', (ev) => {
+  for (let url in imagenesArray) {
+    miniaturas.classList.add('mostrar-div');
+  }
+
   if (ev.target.matches('#boton1')) {
     boton1.classList.add('o-m');
     boton2.classList.remove('o-m');
@@ -44,7 +48,7 @@ body.addEventListener('click', (ev) => {
     boton1.classList.remove('o-m');
   }
 }); 
-*/
+
 
 // <<<<<<< HEAD
 //         // const agrandarMiniatura = 
@@ -87,8 +91,12 @@ body.addEventListener('click', (ev) => {
 body.addEventListener('click', (ev) => {
   for (let url in imagenesArray) {
     ev.target.classList.add('ampliar')
+  } 
+  
+  if (ev.target.classList.contains('ampliar')) {
+    const item = ev.target.item;
   }
-})
+});
 
 // Funciones 
 
