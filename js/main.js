@@ -68,20 +68,6 @@ boton2.addEventListener('click', () => {
 // Evento 2
 
 
-
-
-// Evento 3
-
-body.addEventListener('click', (ev) => {
-  for (let url in imagenesArray) {
-    ev.target.classList.add('ampliar')
-  } 
-  
-  if (ev.target.classList.contains('ampliar')) {
-    const item = ev.target.item;
-  }
-});
-
 // Funciones 
 
 const cajasMiniaturas = () => {
@@ -114,25 +100,5 @@ const cajaFotosGran = () => {
   fotoGrande.append(fotoGranFragment);
 };
 
-/*
-const cajaFotosGran = () => {
-  imagenesArray.forEach((item) => {
-    const cajaGran = document.createElement('DIV');
-    const cajaFig = document.createElement('FIGURE',);
-    cajaFig.innerHTML = item.titulo;
-    const cajaFigCap = document.createElement('FIGCAPTION');
-    cajaFigCap.innerHTML = item.pie;
-    const imagenesGran = document.createElement('IMG');
-    imagenesGran.src = item.url, item.alt;
-    cajaFigCap.append(imagenesGran);
-    cajaFig.append(cajaFigCap);
-    cajaGran.append(cajaFig);
-    fotoGranFragment.append(cajaGran);
-  });
-  fotoGrande.append(fotoGranFragment);
-};
-*/
-
 cajasMiniaturas();
 cajaFotosGran();
-

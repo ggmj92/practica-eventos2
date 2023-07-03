@@ -56,11 +56,6 @@ h1 {
     margin: auto;
 }
   
-.gridContainer > div {
-    /* flex: 1 1 200px; flex-grow, flex-shrink flex-basis
-    margin: 10px; */
-}
-  
 .gridContainer img {
     width: 100%;
 }
@@ -93,9 +88,3 @@ h1 {
 #boton2 {
     display: none;
 }
-
-/* .ampliar {
-    width: 65%;
-    justify-content: center;
-    margin: auto;
-} */
