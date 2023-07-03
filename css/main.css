@@ -56,18 +56,14 @@ h1 {
     margin: auto;
 }
   
-.gridContainer > div {
-    /* flex: 1 1 200px; flex-grow, flex-shrink flex-basis
-    margin: 10px; */
-}
-  
+
 .gridContainer img {
     width: 100%;
 }
 
-.gridContainerGrande{
+/* .gridContainerGrande{
     width: 100%;
-    display: none;
+    display: flex;
     grid-template-rows: auto;
     grid-template-areas: 
     "titulo-imagen"
@@ -76,9 +72,9 @@ h1 {
     gap: 10px;
     justify-content: center;
 
-}
+} */
 
-.gridContainerGrande figure {
+/* .gridContainerGrande figure {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,14 +84,13 @@ h1 {
 
 .gridContainerGrande figcaption {
     margin-top: 10px;
-}
+} */
+
+.divImagenG{
+    display: none;
+} 
+
 
 #boton2 {
     display: none;
 }
-
-/* .ampliar {
-    width: 65%;
-    justify-content: center;
-    margin: auto;
-} */

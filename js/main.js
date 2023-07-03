@@ -46,6 +46,8 @@ const body = document.querySelector('body');
 const boton1 = document.querySelector('#boton1');
 const boton2 = document.querySelector('#boton2');
 
+
+
 const fotoGranFragment = document.createDocumentFragment();
 const fotoGrande = document.querySelector('#fotoGrande');
 
@@ -70,24 +72,20 @@ boton2.addEventListener('click', () => {
 
 
 
+
+
+
+
 // Evento 3
 
-body.addEventListener('click', (ev) => {
-  for (let url in imagenesArray) {
-    ev.target.classList.add('ampliar')
-  } 
-  
-  if (ev.target.classList.contains('ampliar')) {
-    const item = ev.target.item;
-  }
-});
 
 // Funciones 
 
 const cajasMiniaturas = () => {
-  imagenesArray.forEach((item) => {
+  imagenesArray.forEach((item,index) => {
     const cajaMin = document.createElement("DIV");
     cajaMin.classList.add('divImagen');
+    cajaMin.classList.add(`divImagen${index}`)
     const imagenes = document.createElement("IMG");
     imagenes.src = item.url, item.alt;
     cajaMin.append(imagenes);
@@ -97,8 +95,11 @@ const cajasMiniaturas = () => {
 };
 
 const cajaFotosGran = () => {
-  imagenesArray.forEach((item) => {
+
+  imagenesArray.forEach((item,index) => {
     const cajaGran = document.createElement('DIV');
+    cajaGran.classList.add('divImagenG');
+    cajaGran.classList.add(`divImagenG${index}`);
     const cajaFig = document.createElement('FIGURE');
     cajaFig.innerHTML = item.titulo;
     cajaFig.classList.add('ampliar')
@@ -112,7 +113,11 @@ const cajaFotosGran = () => {
     fotoGranFragment.append(cajaGran);
   });
   fotoGrande.append(fotoGranFragment);
+
+
 };
+
+
 
 /*
 const cajaFotosGran = () => {
@@ -133,6 +138,13 @@ const cajaFotosGran = () => {
 };
 */
 
+
 cajasMiniaturas();
 cajaFotosGran();
+
+divImagen0.addEventListener('click', (ev) => {
+  divImagenG.style.display = 'none';
+  divImagenG0.style.display = 'block';
+  
+});
 
