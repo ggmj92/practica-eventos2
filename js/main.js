@@ -21,6 +21,7 @@ const imagenesArray = [
     titulo: 'Viaje trekking',
     pie: 'Viaje tres',
   },
+  
 ];
 
 const body = document.querySelector('body');
@@ -35,56 +36,32 @@ const fotoGrande = document.querySelector('#fotoGrande');
 // Evento 1
 
  
-body.addEventListener('click', (ev) => {
-  for (let url in imagenesArray) {
-    miniaturas.classList.add('mostrar-div');
-  }
+// body.addEventListener('click', (ev) => {
 
-  if (ev.target.matches('#boton1')) {
-    boton1.classList.add('o-m');
-    boton2.classList.remove('o-m');
-  } else if (ev.target.matches('#boton2')) {
-    boton2.classList.add('o-m');
-    boton1.classList.remove('o-m');
-  }
-}); 
-
-
-// <<<<<<< HEAD
-//         // const agrandarMiniatura = 
-//         // accededer al objeto por posición
-
-//     };
-
-//     // Aquí va función
-// } 
-// );
-// =======
-
-/*
-body.addEventListener('click', (ev) => {
-  while (ev.target.matches('#boton1 m-o')) {
-    boton1.classList.remove('m-o');
-    item.classList.add('m-o-block');
-  } 
-});
-*/
-
-// const boton = document.getElementById('botones');
-// const contenedorImagenes = document.getElementById('minuaturas');
-
-// boton.addEventListener('click', function () {
-//   if (contenedorImagenes.style.display === 'none') {
-//     contenedorImagenes.style.display = 'block';
-//     boton.textContent = 'Ocultar Fotos';
-//   } else {
-//     contenedorImagenes.style.display = 'none';
-//     boton.textContent = 'Mostrar Fotos';
+//   if (ev.target.matches('#boton1')) {
+//     boton1.classList.hidden('m-o');
+//     /* boton2.classList.remove('m-o'); */
+//     boton2.classList.add('m-o');
+//   } else if (ev.target.matches('#boton2')) {
+//     boton2.classList.hidden('m-o');
+//     boton1.classList.add('m-o');
 //   }
-// });
-// >>>>>>> db42997f7419c9b2cf8128c5df6d7d61d511e243
+// }); 
+
+boton1.addEventListener('click', () => {
+  boton1.style.display = 'none';
+  boton2.style.display = 'block';
+  miniaturas.style.display = 'flex';
+});
+
+boton2.addEventListener('click', () => {
+  boton2.style.display = 'none';
+  boton1.style.display = 'block';
+  miniaturas.style.display = 'none';
+});
 
 // Evento 2
+
 
 // Evento 3
 

@@ -28,6 +28,14 @@ h1 {
     text-align: center;
 }
 
+.boton {
+    margin: auto;
+}
+
+#boton2 {
+    display: none;
+}
+
 .mostrar-ocultar {
     width: 60%;
     margin: 0 auto 20px auto;
@@ -36,20 +44,15 @@ h1 {
     padding: 15px;
 }
 
-/* .m-o {
-  display: none;
-};  */
-
 /* .m-o-block {
     display: block;
 }; */
 
 .gridContainer {
     width: 60%;
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
     justify-content: center;
-    margin: 0 auto;
+    margin: auto;
 }
   
   .gridContainer > div {
@@ -63,7 +66,7 @@ h1 {
 
 .gridContainerGrande{
     width: 100%;
-    display: grid;
+    display: none;
     grid-template-rows: auto;
     grid-template-areas: 
     "titulo-imagen"
@@ -86,8 +89,8 @@ h1 {
     margin-top: 10px;
 }
 
-.ampliar {
+/* .ampliar {
     width: 65%;
     justify-content: center;
     margin: auto;
-}
+} */
