@@ -21,6 +21,24 @@ const imagenesArray = [
     titulo: 'Viaje trekking',
     pie: 'Viaje tres',
   },
+  {
+    url: 'assets/images/viajes-2.jpg',
+    alt: 'Chica sobre hamaca en la playa',
+    titulo: 'Viaje al Caribe',
+    pie: 'Viaje cuatro',
+  },
+  {
+    url: 'assets/images/viajes-5.jpg',
+    alt: 'Paseo maritimo con tunel natural',
+    titulo: 'Viaje por acantilados',
+    pie: 'Viaje cinco',
+  },
+  {
+    url: 'assets/images/viajes-7.jpg',
+    alt: 'Pueblo rural con castillo en el monte',
+    titulo: 'Viaje trekking',
+    pie: 'Viaje seis',
+  },
   
 ];
 
@@ -35,19 +53,6 @@ const fotoGrande = document.querySelector('#fotoGrande');
 
 // Evento 1
 
- 
-// body.addEventListener('click', (ev) => {
-
-//   if (ev.target.matches('#boton1')) {
-//     boton1.classList.hidden('m-o');
-//     /* boton2.classList.remove('m-o'); */
-//     boton2.classList.add('m-o');
-//   } else if (ev.target.matches('#boton2')) {
-//     boton2.classList.hidden('m-o');
-//     boton1.classList.add('m-o');
-//   }
-// }); 
-
 boton1.addEventListener('click', () => {
   boton1.style.display = 'none';
   boton2.style.display = 'block';
@@ -61,6 +66,8 @@ boton2.addEventListener('click', () => {
 });
 
 // Evento 2
+
+
 
 
 // Evento 3
@@ -80,7 +87,7 @@ body.addEventListener('click', (ev) => {
 const cajasMiniaturas = () => {
   imagenesArray.forEach((item) => {
     const cajaMin = document.createElement("DIV");
-    // cajaMin.classList.add('gridContainer');
+    cajaMin.classList.add('divImagen');
     const imagenes = document.createElement("IMG");
     imagenes.src = item.url, item.alt;
     cajaMin.append(imagenes);
