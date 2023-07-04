@@ -71,13 +71,7 @@ boton2.addEventListener('click', () => {
 
 // Evento 2
 
-imagenes.addEventListener('click' , (ev) => {
-  if(ev.target.id == id) {
-    imagenesArray.find((ev) => {
-      ev.
-    })
-  }
-})
+
 
 
 
